@@ -1,0 +1,18 @@
+.mui-input-row{
+    padding: 0 10px;
+}
+.mui-input-row:nth-of-type(1){
+    margin-top: 15px;
+}
+.mui-btn-primary{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    padding: 8px 0;
+}
+body .mui-toast-container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    z-index:999999;
+}

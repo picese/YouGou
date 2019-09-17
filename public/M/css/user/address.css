@@ -1,0 +1,36 @@
+.mui-table-view {
+    margin-top: 6px;
+}
+.mui-scroll{
+    height: 100%;
+    padding-top: 45px;
+}
+.YG_container .mui-table-view .add{
+    text-align: center;
+    padding-right: 12px;
+}
+.mui-slider-handle .postalCode{
+    font-size: 14px;
+    color: #000;
+}
+.mui-slider-handle .mobile{
+    font-size: 14px;
+    color: #000;
+    display: block;
+    padding-top: 6px;
+}
+.mui-slider-handle .consignee{
+    font-size: 14px;
+    padding-left: 20px;
+    color: #000;
+}
+.mui-slider-handle .address{
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000;
+    padding-top: 4px;
+    width: 90%;
+}

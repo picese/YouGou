@@ -1,0 +1,303 @@
+/* 登录页面样式 */
+.bg-login {
+    background-color: rgb(135, 96, 226);
+    ;
+}
+
+.bg-login .panel {
+    margin-bottom: 0;
+}
+
+.bg-login .panel-body {
+    background-color: #fff;
+}
+
+.mt-150 {
+    margin-top: 150px;
+}
+
+.mr-50 {
+    margin-right: 50px;
+}
+
+/* 主页样式 */
+.left {
+    width: 16%;
+    height: 100%;
+    background: #222d32;
+    position: absolute;
+}
+
+.left .navbar-default {
+    background: none;
+    border: 0;
+}
+
+.left .navbar-collapse {
+    padding: 0;
+    border: 0;
+}
+
+.left .navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+
+.left .navbar-nav>li:hover{
+    background-color: #fff;
+}
+
+.left .navbar-nav>li:first-child {
+    background-color: #367fa9;
+    font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+}
+
+.left .navbar-nav>li:nth-of-type(2) {
+    color: #9E9E9E;
+    padding: 30px 0 20px 0;
+}
+
+.left .navbar-nav>li:nth-of-type(2):hover{
+    background-color: #222d32;
+}
+
+.left .nav>li>img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.left .navbar-nav>li>a>span {
+    padding-right: 9px;
+}
+
+.left .navbar-nav>li.sort{
+    display:none;
+    font-size: 12px;
+}
+
+.right {
+    width: 84%;
+    height: 100%;
+    margin-left: 16%;
+}
+
+.right nav {
+    height: 42px;
+    line-height: 42px;
+    background-color: #3c8dbc;
+}
+
+.right nav a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 16px;
+}
+
+.right nav a:last-child {
+    float: right;
+}
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    width: 94%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.right .breadcrumb li:last-child a{
+    color: gray;
+}
+
+.right .chart{
+    margin-top: 20px;
+    padding: 0 26px;
+}
+
+.right .chart .picChart{
+    width: 45%;
+    float: left;
+    height: 400px;
+}
+
+.right .chart .picChart:first-child{
+    margin-right: 10%;
+}
+
+.muen{
+    width:100%;
+    margin-left: 0;
+}
+.glyphicon-info-sign {
+    top: 3px;
+    right: 4px;
+}
+
+#logoutModel p {
+    margin: 0 6px 10px;
+}
+
+/* 用户管理 */
+.userTab {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.userTab th, 
+.userTab tr{
+    text-align: center;
+}
+
+.userTab .news td:nth-of-type(2){
+    width: 400px;
+}
+
+
+.userTab .new td img{
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+}
+
+.addBtn{
+    margin-left: 3%;
+    margin-top: 20px;
+    width: 11%;
+}
+.pagination {
+    margin: 0;
+    margin-right: 24px;
+}
+
+#modal .modal-body img,
+#editModal .modal-body img{
+    width: 100px;
+    height: 100px;
+}
+
+[name="pic1"] {
+    position: absolute;
+    top: 48%;
+    left: 34%;
+    opacity: 0;
+    padding: 38px 0;
+    z-index: 10000;
+}
+
+[name="pic"] {
+    position: absolute;
+    top: 72%;
+    left: 34%;
+    opacity: 0;
+    padding: 38px 0;
+    z-index: 10000;
+}
+/* 模态框 */
+#modal .modal-body .dropdown-menu{
+    min-width: 0;
+    left: 71px;
+}
+
+#form .form-group .form-control-feedback,
+#editForm .form-group .form-control-feedback{
+    top:20px !important;
+}
+
+#form .form-group,
+#editForm .form-group {
+    margin-right: 0px; 
+    margin-left: 0px;
+}
+
+#lowerModal strong{
+    color: #367fa9;
+}
+
+/* 屏幕大于768 */
+@media (min-width: 768px) {
+    .left .navbar-nav>li {
+        float: none;
+    }
+
+    .userTab .new td{
+        line-height: 60px;
+    }
+
+}
+
+/* 屏幕小于768 */
+@media (max-width: 768px) {
+    /*  主页 */
+    .left .navbar-nav {
+        margin: 0;
+    }
+
+    .left .navbar-nav>li:first-child {
+        font-size: 17px;
+        height: 42px;
+        line-height: 42px;
+    }
+
+    .left .navbar-nav>li a {
+        padding: 10px 0;
+    }
+
+    .left .navbar-nav>li img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 4px;
+    }
+
+    .left .navbar-nav>li span {
+        display: block;
+        margin: 0px auto;
+        padding-left: 10px;
+        padding-bottom: 6px;
+    }
+
+    .left .navbar-toggle{
+        display: none;
+    }
+
+    .left .navbar-collapse{
+        display: block;
+    }
+    .right .chart{
+        padding: 0 6px;
+    }
+
+    #barChart, #barChart canvas,
+    #pieChart, #pieChart canvas{
+        height: 338px !important;
+    }
+
+    .right .chart .picChart:first-child{
+        width: 100%;
+        margin: 0;
+    }
+    .right .chart .picChart:last-child{
+        width: 100%;
+
+    }
+    .table>tbody>tr>td, 
+    .table>tbody>tr>th, 
+    .table>tfoot>tr>td, 
+    .table>tfoot>tr>th, 
+    .table>thead>tr>td, 
+    .table>thead>tr>th {
+        padding: 2px 2px;
+        line-height: 2.5;
+        vertical-align: middle;
+    }
+}

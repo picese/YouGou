@@ -1,0 +1,157 @@
+/* 商品标题 */
+.YG_title{
+    width: 100%;
+    font-size: 16px;
+    padding: 15px 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 商品价格  */
+.YG_price{
+    width: 100%;
+    padding: 15px 5px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+}
+
+.YG_price .nowPrice{
+    font-size: 24px;
+    color: #991020;
+}
+
+.YG_price .oldPrice{
+    font-size: 18px;
+    margin-left: 15px;
+    color: #afafaf;
+}
+
+/* 商品尺码  */
+.YG_size{
+    width: 100%;
+    padding: 15px 5px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+}
+
+.YG_size .size{
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    margin-left: 5px;
+    padding: 4px;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 7px;
+}
+
+/* 商品数量 */
+.YG_number{
+    width: 100%;
+    padding: 15px 5px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+}
+.YG_number .reduce{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+.YG_number input{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: -4px;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+.YG_number .increase{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+.YG_number .surplus{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+
+/* 商品操作 */
+.YG_product{
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background-color: #ccc;
+    border-top:1px solid #bbb;
+}
+.YG_product .icon_cart{
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    font-size: 20px;
+    color: #333;
+}
+.YG_product .YG_addCart,
+.YG_product .YG_pay{
+    width: 42%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    margin-top: 8px;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+}
+.YG_product .YG_addCart{
+    background-color: #991020;
+    margin-left: 46px;
+}
+
+.YG_product .YG_pay{
+    background-color: #fa672d;
+    margin-left: 10px;
+}
+
+.now{
+    background-color: #fa672d;
+}
+
+/* 加载 */
+.loading{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.loading .mui-icon{
+    font-size: 50px;
+    margin-top: 250px;
+    animation: Loading 1s linear infinite;
+}
+
+@keyframes Loading{
+    form{}
+    to{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}

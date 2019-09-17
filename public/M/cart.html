@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>优购</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
+
+  <body>
+    <div class="YG_layout">
+      <!-- 头部 -->
+      <header class="YG_topBar">
+        <a
+          href="javascript:history.back();"
+          class="icon_block fa fa-arrow-left"
+        ></a>
+        <span>购物车</span>
+        <a href="javascript:;" class="icon_search fa fa-refresh"></a>
+      </header>
+
+      <!-- 主体 -->
+      <div class="YG_container mui-scroll-wrapper" id="refreshContainer">
+        <div class="mui-scroll">
+          <ul class="mui-table-view">
+            <!-- TODO -->
+          </ul>
+        </div>
+      </div>
+      <!-- 订单 -->
+      <div class="order">
+        订单总额：¥<span id="amount">0.00</span><a href="javascript:;" class="mui-clearfix">立即支付</a>
+      </div>
+
+      <!-- 底部 -->
+      <footer class="YG_tab">
+        <a class="tab_home fa fa-home" href="index.html"><span>首页</span></a>
+        <a class="tab_sort fa fa-bars" href="sort.html"><span>分类</span></a>
+        <a class="tab_cart fa fa-shopping-cart now" href="cart.html"
+          ><span>购物车</span></a
+        >
+        <a class="tab_user fa fa-user" href="user/my.html"><span>我的</span></a>
+      </footer>
+    </div>
+
+    <script type="text/template" id="cart">
+      <% for(var i = 0; i < data.length; i++){ %>
+        <% var item = data[i] %>
+        <li class="mui-table-view-cell mui-media">
+          <div class="mui-slider-right mui-disabled" data-id="<%=item.id%>">
+              <a class="mui-btn mui-btn-blue" style="transform: translate(0px, 0px);">编辑</a>
+              <a class="mui-btn mui-btn-red" style="transform: translate(-88px, 0px);">删除</a>
+          </div>
+          <div class="mui-slider-handle" style="transform: translate(0px, 0px);">
+                  <a href="javascript:;">
+                      <%
+                      var address = '../M/images/none.png';
+                      if(item.pic && item.pic[0] && item.pic[0].picAddr){
+                        address = item.pic[0].picAddr;
+                      }
+                    %>
+                      <img class="mui-media-object mui-pull-left" src="<%=address%>">
+                      <div class="mui-media-body">
+                          <p class="name"><%=item.proName%></p>
+                          <p class="num">
+                              <span class="price"><%=item.price%></span>
+                              <span class="oldPrice"><%=item.oldPrice%></span>
+                              <span class="number mui-clearfix">x<%=item.num%>双</span>
+                          </p>
+                          <span class="yards">鞋码：<%=item.size%></span>
+                      </div>
+                      <input type="checkbox" data-id="<%=item.id%>">
+                    </a>
+            </div>
+        </li>
+      <% } %>
+    </script>
+
+    <script type="text/template" id="edit">
+      <div class="p_edit mui-clearfix">
+        <p class="p_txt">尺码：</p>
+        <div class="p_size">
+          <% 
+          var itemArr = productSize.split('-');
+          for(var i = itemArr[0]; i <= itemArr[1]; i++){
+          %>
+            <span class="<%=i==size?'now':''%>"><%=i%></span>
+          <% } %>
+        </div>
+        <div class="p_number">
+            <p>数量：</p>
+            <span class="reduce">-</span>
+            <input readonly type="text" value="<%=num%>" data-max="<%=productNum%>">
+            <span class="increase">+</span>
+        </div>
+      </div>
+    </script>
+
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

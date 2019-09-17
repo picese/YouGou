@@ -1,0 +1,25 @@
+.YG_container .form_box{
+    padding: 10px;
+}
+
+.YG_container .form_box .mui-btn-primary{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.YG_container .form_box .login{
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.YG_container .form_box .login span {
+    border-right: 2px solid #ccc;
+}
+.YG_container .form_box .register{
+    margin-right: 5px;
+}
+
+.YG_container .form_box .forget{
+    margin-left: 8px;
+}

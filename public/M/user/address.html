@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>优购</title>
+    <link type="image/x-icon" rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../assets/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="../assets/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/user/address.css" />
+</head>
+
+<body>
+    <div class="YG_layout">
+        <!-- 头部 -->
+        <header class="YG_topBar">
+            <a href="javascript:history.back();" class="icon_block fa fa-arrow-left"></a>
+            <span>收货地址</span>
+        </header>
+        <!-- 主体 -->
+        <div class="YG_container">
+            <div class="mui-scroll-wrapper" id="refreshContainer">
+                <div class="mui-scroll">
+                    <!-- TODO -->
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <footer class="YG_tab">
+            <a class="tab_home fa fa-home" href="../index.html"><span>首页</span></a>
+            <a class="tab_sort fa fa-bars" href="../sort.html"><span>分类</span></a>
+            <a class="tab_cart fa fa-shopping-cart" href="../cart.html"><span>购物车</span></a>
+            <a class="tab_user fa fa-user" href="my.html"><span>我的</span></a>
+        </footer>
+    </div>
+    <script type="text/html" id="Address">
+        <% if(model && model.length < 5) { %>
+            <ul class="mui-table-view mui-table-view-chevron">
+                <li class="mui-table-view-cell">
+                    <a href="addressMagess.html" class="mui-navigate-right add">添加收货地址</a>
+                </li>
+            </ul>
+        <% } %>
+        <% if(model && model.length) { %>
+            <% for(var i = model.length-1; i >= 0;i--) { %>
+                <% var item = model[i] %>
+                <ul class="mui-table-view">
+                        <li class="mui-table-view-cell mui-media">
+                            <div class="mui-slider-right mui-disabled" data-id="<%=item.id%>">
+                                <a  href="addressMagess.html?addressId=<%=item.id%>" class="mui-btn mui-btn-blue" style="transform: translate(0px, 0px);">编辑</a>
+                                <a class="mui-btn mui-btn-red" style="transform: translate(-88px, 0px);">删除</a>
+                            </div>
+                            <div class="mui-slider-handle" style="transform: translate(0px, 0px);">
+                                <a href="javascript:;" class="mui-navigate-right">
+                                    <span class="postalCode">邮&nbsp编：<%=item.postCode%></span>
+                                    <span class="consignee">收货人：<%=item.recipients%></span>
+                                    <span class="mobile">联系人：<%=item.mobile%></span>
+                                    <span class="address">地址：<%=item.address%><%=item.addressDetail%></span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+            <% } %>
+        <% } %>
+    </script>
+    <script src="../assets/mui/js/mui.min.js"></script>
+    <script src="../assets/zepto/zepto.min.js"></script>
+    <script src="../assets/artTemplate/template-native.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/user/address.js"></script>
+</body>
+
+</html>

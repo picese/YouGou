@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>后台管理系统-首页</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap-validator/css/bootstrapValidator.css">
+  <link rel="stylesheet" href="assets/nprogress/nprogress.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+  <!-- 侧边栏 -->
+  <aside class="left">
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>Admin</li>
+          <li><img src="images/default.png">管理员</li>
+          <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>后台首页</a></li>
+          <li  class="active"><a href="userMagess.html"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+          <li>
+            <a href="javascript:;"><span class="glyphicon glyphicon-th-list"></span>分类管理</a>
+            <li class="sort"><a href="sortFirst.html">商品分类</a></li>
+          <li class="sort"><a href="sortSecond.html">品牌分类</a></li>
+          </li>
+          <li><a href="productMagess.html"><span class="glyphicon glyphicon-list-alt"></span>商品管理</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+  <!-- 主体 -->
+  <section class="right">
+    <nav>
+      <a href="javascript:;"><span class="glyphicon glyphicon-align-justify"></span></a>
+      <a href="javascript:;"><span class="glyphicon glyphicon-log-out"></span></a>
+    </nav>
+    <ol class="breadcrumb">
+      <li><a href="#">管理系统</a></li>
+      <li><a href="#">用户管理</a></li>
+    </ol>
+    <div class="userTab">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>用户名</th>
+            <th>电话</th>
+            <th>状态</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody class="news">
+          <!-- TODO -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 禁用or启用模态框 -->
+  <div class="modal fade" id="modal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <h4 class="modal-title">温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span> 您确定要 <strong></strong> 这个用户吗？</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="submit" form="form" class="btn btn-primary">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 渲染数据 -->
+  <script type="text/template" id="list">
+    <% for(var i = 0; i < rows.length; i++) { %>
+      <tr>
+        <td><%=(page-1)*size+i+1%></td>
+        <td><%=rows[i].username%></td>
+        <td><%=rows[i].mobile%></td>
+        <td><%=rows[i].isDelete==1?'正常':'已禁用'%></td>
+        <td>
+          <%if(rows[i].isDelete==1){%>
+            <a data-id="<%=rows[i].id%>" data-name="<%=rows[i].username%>" href="javascript:;" class="btn btn-sm btn-danger">禁用</a>
+            <%}else{%>
+            <a data-id="<%=rows[i].id%>" data-name="<%=rows[i].username%>" href="javascript:;" class="btn btn-sm btn-primary">启用</a>
+          <%}%>
+        </td>
+      </tr>
+    <% } %>
+  </script>
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/nprogress/nprogress.js"></script>
+  <script src="assets/artTemplate/template-native.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/userMagess.js"></script>
+</body>
+
+</html>

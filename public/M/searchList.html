@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>优购</title>
+    <meta name="description" content="乐购是中国最大的正品运动鞋、皮鞋网上专卖。乐购网经营的品牌包括耐克、阿迪达斯、李宁、匡威等国内外知名品牌的篮球鞋,板鞋,休闲鞋,跑步鞋,帆布...">
+    <meta name="Keywords" content="乐购 乐购鞋城 买鞋子 上乐购 运动鞋 篮球鞋 帆布鞋 跑步鞋 男鞋 女鞋 足球鞋 休闲鞋 凉鞋 户外鞋 布洛克 高跟鞋 单鞋 豆豆鞋 乐福鞋 牛津鞋 凉拖 皮鞋 短靴 长靴 登山鞋 徒步鞋 硫化鞋 训练鞋 溯溪鞋 越野鞋 板鞋 足球鞋 网球鞋 赛车鞋 雪地靴 马丁靴 商务 英伦">
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/searchList.css" />
+</head>
+
+<body>
+    <div class="YG_layout">
+        <!-- 头部 -->
+        <header class="YG_topBar">
+            <a href="javascript:history.back();" class="icon_block fa fa-arrow-left"></a>
+            <span>搜索列表</span>
+        </header>
+
+        <!-- 搜索结果 -->
+        <div class="YG_container">
+            <div class="mui-scroll-wrapper" id="refreshContainer">
+            <div class="mui-scroll">
+                <!-- 搜索 -->
+                <div class="YG_search">
+                    <form action="" method="">
+                        <input type="search" placeholder="请输入商品名称" class="search">
+                    </form>
+                    <a href="javascript:;" class="search_btn">搜索</a>
+                </div>
+
+                <!-- 列表排序 -->
+                <div class="YG_order">
+                    <a href="javascript:;" data-order="time">上架时间<span class="fa fa-angle-down"></span></a>
+                    <a href="javascript:;" data-order="price">价格<span class="fa fa-angle-down"></span></a>
+                    <a href="javascript:;" data-order="num">销量<span class="fa fa-angle-down"></span></a>
+                    <a href="javascript:;" data-order="sales">折扣<span class="fa fa-angle-down"></span></a>
+                </div>
+
+                <!-- 搜索结果 -->
+                <div class="YG_SpecialColumn">
+                    <div class="mui-clearfix">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- 底部 -->
+        <footer class="YG_tab">
+            <a class="tab_home fa fa-home now" href="index.html"><span>首页</span></a>
+            <a class="tab_sort fa fa-bars" href="sort.html"><span>分类</span></a>
+            <a class="tab_cart fa fa-shopping-cart" href="cart.html"><span>购物车</span></a>
+            <a class="tab_user fa fa-user" href="user/my.html"><span>我的</span></a>
+        </footer>
+
+        <script type="text/html" id="shop">
+            <% for(var i =0; i < data.length; i++){ %>
+                <a href="product.html?productId=<%=data[i].id%>" class="commodityBox">
+                    <div class="box">
+                        <img src="<%=data[i].pic[0].picAddr%>" alt="">
+                        <p><%=data[i].proName%> </p>
+                        <p>
+                            <span class="price">&yen;<%=data[i].price%></span>
+                            <span class="oldPrice">&yen;<%=data[i].oldPrice%></span>
+                            <span class="sales">销量<%=data[i].num%></span>
+                        </p>
+                        <button>立即购买</button>
+                    </div>
+                </a>
+            <% } %>  
+        </script>
+
+        <script src="assets/mui/js/mui.min.js"></script>
+        <script src="assets/zepto/zepto.min.js"></script>
+        <script src="assets/artTemplate/template-native.js"></script>
+        <script src="js/searchList.js"></script>
+</body>
+
+</html>

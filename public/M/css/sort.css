@@ -1,0 +1,80 @@
+body {
+    background-color: #fff;
+}
+
+.YG_layout .YG_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.YG_container .YG_SortLeft {
+    width: 80px;
+    float: left;
+    padding-top: 45px;
+    padding-bottom: 55px;
+}
+
+.YG_container .YG_SortLeft ul,
+.YG_container .YG_SortRight ul {
+    padding: 0;
+    margin: 0;
+}
+
+.YG_container .YG_SortLeft ul li {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #efeff4;
+    border-right: 1px solid #c9c9c9;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.YG_container .YG_SortLeft ul li.now {
+    background-color: #fff;
+    border-right: none;
+    color: #006699;
+}
+
+.YG_container .YG_SortRight {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 14px;
+    padding-bottom: 55px;
+    padding-left: 80px;
+    text-align: center;
+}
+
+.YG_container .YG_SortRight ul {
+    background-color: #fff;
+    padding-top: 10px;
+}
+
+.YG_container .YG_SortRight ul li {
+    width: 33.33333%;
+    float: left;
+    padding: 6px 0;
+}
+
+.YG_container .YG_SortRight ul li a {
+    display: block;
+}
+
+.YG_container .YG_SortRight ul li a img {
+    display: block;
+    max-width: 66px;
+    height: 34px;
+    margin: 0 auto;
+}
+
+.YG_container .YG_SortRight ul li a span {
+    color: #000;
+    font-size: 12px;
+}
+
+.YG_container .YG_SortRight ul div {
+    margin-top: 50px;
+    color: #ccc;
+}

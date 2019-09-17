@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>优购</title>
+    <meta name="description" content="乐购是中国最大的正品运动鞋、皮鞋网上专卖。乐购网经营的品牌包括耐克、阿迪达斯、李宁、匡威等国内外知名品牌的篮球鞋,板鞋,休闲鞋,跑步鞋,帆布...">
+    <meta name="Keywords" content="乐购 乐购鞋城 买鞋子 上乐购 运动鞋 篮球鞋 帆布鞋 跑步鞋 男鞋 女鞋 足球鞋 休闲鞋 凉鞋 户外鞋 布洛克 高跟鞋 单鞋 豆豆鞋 乐福鞋 牛津鞋 凉拖 皮鞋 短靴 长靴 登山鞋 徒步鞋 硫化鞋 训练鞋 溯溪鞋 越野鞋 板鞋 足球鞋 网球鞋 赛车鞋 雪地靴 马丁靴 商务 英伦">
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/product.css" />
+  </head>
+
+  <body>
+    <div class="YG_layout">
+      <!-- 头部 -->
+      <header class="YG_topBar">
+        <a href="javascript:history.back();" class="icon_block fa fa-arrow-left"></a>
+        <span>商品详情</span>
+        <a href="index.html" class="icon_search fa fa-home"></a>
+      </header>
+
+      <!-- 主体 -->
+      <div class="YG_container mui-scroll-wrapper">
+        <div class="loading"><span class="mui-icon mui-icon-loop"></span></div>
+        <div class="mui-scroll">
+            <div class="mui-slider">
+
+          </div>
+        </div>
+      </div>
+      <!-- 商品操作 -->
+      <div class="YG_product">
+            <a href="javascript:;" class="icon_cart fa fa-shopping-cart"></a>
+            <a href="javascript:;" class="YG_addCart">加入购物车</a>
+            <a href="javascript:;" class="YG_pay">立即购买</a>
+        </div>
+    </div>
+
+  <script type="text/html" id="Details">
+      <% if(!pic && !pic.length){ %>
+        pic = [{picAddr:'images/none.jpg'}];
+      <% } %>
+        <div class="mui-slider">
+          <div class="mui-slider-group mui-slider-loop">
+            <div class="mui-slider-item mui-slider-item-duplicate">
+              <a href="#"><img src="<%=pic[pic.length-1].picAddr%>"/></a>
+            </div>
+            <% for(var i = 0; i < pic.length; i++){ %>
+              <div class="mui-slider-item">
+                  <a href="#"><img src="<%=pic[i].picAddr%>"/></a>
+                </div>
+              <% } %>
+            <div class="mui-slider-item mui-slider-item-duplicate">
+              <a href="#"><img src="<%=pic[0].picAddr%>"/></a>
+            </div>
+          </div>
+          <div class="mui-slider-indicator">
+            <% for( var i = 0 ; i < pic.length ; i++ ){ %>
+                <div class="mui-indicator <%=i==0?'mui-active':''%>"></div>
+            <% } %>
+          </div>
+        </div>
+        <!-- 商品标题 -->
+        <div class="YG_title"><%=proName%></div>
+
+        <!-- 商品价格 -->
+        <div class="YG_price">价格：
+          <span class="nowPrice"><%=price%></span>
+          <del class="oldPrice"><%=oldPrice%></del>
+        </div>
+
+        <!-- 商品尺码 -->
+        <div class="YG_size">尺码：
+          <% var sizeArr = size.split('-')%>
+          <% for(var i = sizeArr[0];i <= sizeArr[1];i++) {%>
+              <span class="size"><%=i%></span>
+          <% } %>    
+        </div>
+
+        <!-- 商品数量 -->
+        <div class="YG_number">数量：
+            <span class="reduce">-</span>
+            <input readonly type="text" value="1" data-max="<%=num%>">
+            <span class="increase">+</span>
+            <p class="surplus">剩余：<%=num%>件</p>
+      </div>
+  </script> 
+
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/product.js"></script>
+  </body>
+</html>

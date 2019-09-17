@@ -1,0 +1,83 @@
+/* 搜索区域 */
+body{
+    background-color: #fff;
+}
+.YG_container {
+    width: 100%;
+    padding-top: 45px;
+}
+
+.YG_container .YG_search {
+    position: relative;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.YG_container .YG_search input {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #006699;
+    background-color: #fff;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 0;
+
+}
+
+.YG_container .YG_search a {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background-color: #006699;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+/* 搜索记录 */
+.YG_container .YG_history {
+    padding: 15px;
+    font-size: 12px;
+    color: rgb(75, 73, 73);
+    line-height: 12px;
+}
+
+.YG_container .YG_history .title {
+    float: left;
+
+}
+
+.YG_container .YG_history .icon_clear {
+    float: right;
+}
+
+.YG_container .YG_history .history_box {
+    width: 100%;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    margin-top: 25px;
+}
+
+.YG_container .YG_history .history_box li {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+.YG_container .YG_history .history_box li a {
+    float: left;
+    width: 40%;
+}
+
+.YG_container .YG_history .history_box li .icon_delete {
+    float: right;
+    line-height: 40px;
+    font-size: 15px;
+}

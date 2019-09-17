@@ -1,0 +1,137 @@
+/* 搜索区域 */
+body {
+    background-color: #fff;
+}
+
+.YG_container .mui-scroll-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.YG_container .YG_search {
+    position: relative;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.YG_container .YG_search input {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #006699;
+    background-color: #fff;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 0;
+
+}
+
+.YG_container .YG_search a {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background-color: #006699;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+/* 列表排序 */
+.YG_order {
+    width: 100%;
+    height: 30px;
+    background-color: #efefe4;
+    margin-top: 10px;
+}
+
+.YG_order a {
+    float: left;
+    width: 25%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: #333;
+}
+
+.YG_order span {
+    font-size: 12px;
+    padding-left: 2px;
+}
+
+.YG_order a.now {
+    color: #006699;
+}
+
+/* 商品列表 */
+.YG_SpecialColumn {
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.YG_SpecialColumn img {
+    width: 100%;
+    display: block;
+}
+
+.YG_SpecialColumn .commodityBox {
+    width: 50%;
+    padding: 0 5px;
+    margin-top: 8px;
+    float: left;
+}
+
+.YG_SpecialColumn .commodityBox .box {
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 6px #ccc;
+    padding: 10px 0;
+}
+
+.YG_SpecialColumn .commodityBox img {
+    width: 100%;
+    height: 167px;
+    display: block;
+}
+
+.YG_SpecialColumn .commodityBox p {
+    padding: 10px 10px;
+    height: 48px;
+    line-height: 21px;
+    font-size: 14px;
+    color: #8f8f94;
+    overflow: hidden;
+}
+
+.YG_SpecialColumn .commodityBox p:nth-of-type(2) {
+    padding: 0;
+    height: 40px;
+}
+
+.YG_SpecialColumn .commodityBox .price {
+    color: #ff0000;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.YG_SpecialColumn .commodityBox .oldPrice {
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.YG_SpecialColumn .commodityBox .sales {
+    display: block;
+    font-size: 12px;
+}
+
+.YG_SpecialColumn .commodityBox button {
+    background-color: #006699;
+    color: #fff;
+}

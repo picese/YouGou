@@ -1,0 +1,17 @@
+.mui-scroll-wrapper{
+    padding-top: 45px;
+}
+
+.name {
+    font-size: 19px;
+
+}
+.signOut{
+    width: 90%;
+    line-height: 15px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    color: #000;
+    border-radius: 4px;
+}
